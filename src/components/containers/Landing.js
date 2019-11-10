@@ -6,6 +6,7 @@ import Emerald from '../../components/assets/Emerald.png';
 import Necklace from '../../components/assets/necklace.jpg';
 import Pendant from '../../components/assets/pendant.jpg';
 import Home from './Home';
+import Header from './../assets/header.webp';
 
 const photos = [
   { id: 1, src: Earring, alt: 'alt1' },
@@ -19,12 +20,14 @@ const photos = [
   { id: 9, src: Pendant, alt: 'alt9' }
 ];
 
-const type = 'p';
+const footer = { id: 11, src: null, alt: 'alt11' };
+const header = { id: 10, src: Header, alt: 'alt10' };
 
 const Landing = () => {
   const [state, setState] = useState({
     photos: { photos },
-    type: { type }
+    footer: { footer },
+    header: { header }
   });
   //   const [effectState, setEffectState] = useState('');
   // };
@@ -41,7 +44,11 @@ const Landing = () => {
   return (
     <>
       <div>
-        <Home portfolio={state.photos} type={state.type} />
+        <Home
+          portfolio={state.photos}
+          footer={state.footer}
+          header={state.header}
+        />
       </div>
       ;
     </>

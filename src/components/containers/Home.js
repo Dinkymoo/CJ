@@ -1,12 +1,10 @@
 import React from 'react';
-import Photo from './Photo';
 import { ThemeProvider } from 'styled-components';
-import StyledPortfolio from './StyledPortfolio';
-import StyledNavMenu from './StyledNavMenu';
-import PortfolioHeader from './PortfolioHeader';
-import PortfolioFooter from './PortfolioFooter';
-import NavMenu from './NavMenu';
 import Content from './Content';
+import NavMenu from './NavMenu';
+import PortfolioFooter from './PortfolioFooter';
+import PortfolioHeader from './PortfolioHeader';
+import StyledPortfolio from './StyledPortfolio';
 
 const defaultTheme = {
   bgcolour: 'white',
@@ -14,7 +12,7 @@ const defaultTheme = {
   fontcolour: 'black'
 };
 
-const Portfolio = ({ portfolio }) => (
+const Home = ({ portfolio, type }) => (
   <ThemeProvider theme={defaultTheme}>
     <StyledPortfolio>
       <PortfolioHeader />
@@ -38,7 +36,7 @@ const Portfolio = ({ portfolio }) => (
             float: 'right'
           }}
         >
-          <Content photos={portfolio.photos} />
+          <Content photos={portfolio.photos} content={type} />
         </div>
       </div>
 
@@ -47,4 +45,4 @@ const Portfolio = ({ portfolio }) => (
   </ThemeProvider>
 );
 
-export default Portfolio;
+export default Home;

@@ -8,6 +8,7 @@ const App = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={Landing} />
+      <Route exact path="/home" component={Landing} />
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/:portfolio" component={Portfolio} />
     </Switch>

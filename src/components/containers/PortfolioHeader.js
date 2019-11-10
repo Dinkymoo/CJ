@@ -1,7 +1,16 @@
 import React from 'react';
-const PortfolioHeader = ({ active }) => (
-  <>
-    <h1>{active.title}</h1>
-  </>
+import PortFolioHeader from '../assets/portfolio-header.webp';
+
+const PortfolioHeader = () => (
+  <img
+    src={PortFolioHeader}
+    alt="portfolio-header"
+    style={{
+      width: '100%',
+      height: '200px',
+      position: 'fixed',
+      zIndex: '1'
+    }}
+  />
 );
 export default PortfolioHeader;

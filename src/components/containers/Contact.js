@@ -1,13 +1,10 @@
 import React from 'react';
 
 const Contact = props => (
-  <>
-    <form>
-      <label>Name</label>
-      <input type="text" />
-      <label>Email</label>
-      <input type="email" />
-    </form>
-  </>
+  <form>
+    <input name="name" type="text" />
+    <input name="email" type="email" />
+    <input type="submit" value="Submit" />
+  </form>
 );
 export default Contact;
